@@ -1,2 +1,1 @@
-# karate-xplorer-public
-Karate Xplorer
+# Karate Xplorer
