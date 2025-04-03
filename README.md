@@ -6,7 +6,7 @@
             <h3><a href="https://www.karatelabs.io/pricing">:heavy_dollar_sign: <br/>&nbsp;&nbsp;Pricing&nbsp;&nbsp;</a></h3>
         </th>         
         <th>
-            <h3><a href="https://youtu.be/PWfQtFzGSXI?si=dTnTV3PM_ZUiB1wU">:tv: <br/>&nbsp;&nbsp;&nbsp;Video&nbsp;&nbsp;&nbsp;</a></h3>
+            <h3><a href="https://youtu.be/3u0i-vdD0mg?si=9elNmYpLgEyROGJY">:tv: <br/>&nbsp;&nbsp;&nbsp;Video&nbsp;&nbsp;&nbsp;</a></h3>
         </th>        
         <th>
             <h3><a href="https://github.com/karatelabs/xplorer/releases">:zap: <br/> Download</a></h3>
