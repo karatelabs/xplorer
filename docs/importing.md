@@ -5,7 +5,7 @@ title: Importing Collections
 
 # Importing Collections
 
-Xplorer can open your existing collections without modification.
+Xplorer can open your existing collections. There is no migration step. It is that simple.
 
 ## Supported Formats
 
@@ -48,10 +48,6 @@ Karate Xplorer is designed for zero migration effort:
 - ✅ Dynamic variables work as expected
 - ✅ Collection and folder-level scripts
 - ✅ Request-level configuration
-
-## Beta Notice
-
-**Note**: This is beta software. We recommend backing up your Postman collections before making edits. When saving over existing files, you'll see a confirmation dialog.
 
 ## Troubleshooting
 

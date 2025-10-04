@@ -2,7 +2,7 @@
 
 ## API Client • Done Right
 
-Run your existing Postman collections locally. **100% local execution—your secrets never touch the cloud.** Zero migration. Zero hassle.
+Run your existing Postman collections locally. **100% local execution—your secrets never touch the cloud.** No CORS issues. Test localhost and internal APIs directly. Zero migration. Zero hassle.
 
 ---
 
