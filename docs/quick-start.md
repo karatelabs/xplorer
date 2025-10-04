@@ -49,6 +49,6 @@ If you use Postman environments:
 
 ## Next Steps
 
-- Learn about [Interface Overview](interface/)
-- Understand [Running Collections](running/)
-- Try [Data-Driven Testing](data-driven/)
+- Learn about [Interface Overview]({{ '/docs/interface/' | relative_url }})
+- Understand [Running Collections]({{ '/docs/running/' | relative_url }})
+- Try [Data-Driven Testing]({{ '/docs/data-driven/' | relative_url }})

@@ -37,9 +37,9 @@ One active environment at a time keeps things simple and predictable. Environmen
 
 Use the navigation on the left to explore the documentation. We recommend starting with:
 
-1. **[Installation](installation/)** - Download and install Karate Xplorer
-2. **[Quick Start](quick-start/)** - Get running in minutes
-3. **[Interface Overview](interface/)** - Understand the UI layout
+1. **[Installation]({{ '/docs/installation/' | relative_url }})** - Download and install Karate Xplorer
+2. **[Quick Start]({{ '/docs/quick-start/' | relative_url }})** - Get running in minutes
+3. **[Interface Overview]({{ '/docs/interface/' | relative_url }})** - Understand the UI layout
 
 ## Need Help?
 

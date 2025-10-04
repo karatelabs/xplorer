@@ -64,6 +64,6 @@ If you encounter issues:
 
 ## Next Steps
 
-- [Quick Start Guide](quick-start/)
-- [Interface Overview](interface/)
-- [Running Collections](running/)
+- [Quick Start Guide]({{ '/docs/quick-start/' | relative_url }})
+- [Interface Overview]({{ '/docs/interface/' | relative_url }})
+- [Running Collections]({{ '/docs/running/' | relative_url }})

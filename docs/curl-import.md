@@ -169,6 +169,6 @@ For complex requests, import the basic structure and manually add additional set
 
 ## Next Steps
 
-- [Interface Overview](interface/)
-- [Running Requests & Collections](running/)
-- [Environments](environments/)
+- [Interface Overview]({{ '/docs/interface/' | relative_url }})
+- [Running Requests & Collections]({{ '/docs/running/' | relative_url }})
+- [Environments]({{ '/docs/environments/' | relative_url }})

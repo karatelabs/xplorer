@@ -128,6 +128,6 @@ Clear execution results at any level:
 
 ## Next Steps
 
-- [Running Requests & Collections](running/)
-- [Environments](environments/)
-- [Data-Driven Testing](data-driven/)
+- [Running Requests & Collections]({{ '/docs/running/' | relative_url }})
+- [Environments]({{ '/docs/environments/' | relative_url }})
+- [Data-Driven Testing]({{ '/docs/data-driven/' | relative_url }})

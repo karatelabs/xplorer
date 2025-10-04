@@ -127,6 +127,6 @@ Status indicators and Output pane content clear accordingly.
 
 ## Next Steps
 
-- [Data-Driven Testing](data-driven/)
-- [Environments](environments/)
-- [cURL Import](curl-import/)
+- [Data-Driven Testing]({{ '/docs/data-driven/' | relative_url }})
+- [Environments]({{ '/docs/environments/' | relative_url }})
+- [cURL Import]({{ '/docs/curl-import/' | relative_url }})

@@ -197,6 +197,6 @@ if (shouldSucceed) {
 
 ## Next Steps
 
-- [Running Requests & Collections](running/)
-- [Environments](environments/)
-- [Interface Overview](interface/)
+- [Running Requests & Collections]({{ '/docs/running/' | relative_url }})
+- [Environments]({{ '/docs/environments/' | relative_url }})
+- [Interface Overview]({{ '/docs/interface/' | relative_url }})

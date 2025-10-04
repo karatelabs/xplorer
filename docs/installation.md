@@ -100,6 +100,6 @@ sudo dpkg -r xplorer
 
 ## Next Steps
 
-- [Quick Start Guide](quick-start/)
-- [Importing Collections](importing/)
-- [Interface Overview](interface/)
+- [Quick Start Guide]({{ '/docs/quick-start/' | relative_url }})
+- [Importing Collections]({{ '/docs/importing/' | relative_url }})
+- [Interface Overview]({{ '/docs/interface/' | relative_url }})

@@ -147,6 +147,6 @@ pm.environment.unset("old_variable")
 
 ## Next Steps
 
-- [Running Requests & Collections](running/)
-- [Data-Driven Testing](data-driven/)
-- [Interface Overview](interface/)
+- [Running Requests & Collections]({{ '/docs/running/' | relative_url }})
+- [Data-Driven Testing]({{ '/docs/data-driven/' | relative_url }})
+- [Interface Overview]({{ '/docs/interface/' | relative_url }})
