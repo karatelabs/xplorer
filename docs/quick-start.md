@@ -41,10 +41,10 @@ If you use Postman environments:
 
 ## Key Features
 
+- **100% Local - Zero Cloud**: Your secrets never touch the cloud—everything runs on your machine
 - **Zero Migration**: All Postman collections run as-is
 - **JavaScript Support**: Pre-request scripts and tests work unchanged
 - **Enhanced Feedback**: Pass/fail indicators in navigation tree
-- **Local-First**: All data stays on your machine
 - **Secure**: Enterprise-signed desktop application
 
 ## Next Steps

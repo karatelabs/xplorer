@@ -1,8 +1,8 @@
 # Karate Xplorer
 
-**The API Collection Runner Alternative**
+**The API Collection Runner You Always Wanted**
 
-Run your existing Postman collections locally. Zero migration. Zero hassle.
+Run your existing Postman collections locally. **100% local execution—your secrets never touch the cloud.** Zero migration. Zero hassle.
 
 ---
 

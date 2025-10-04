@@ -13,10 +13,10 @@ Welcome to the Karate Xplorer documentation. If you're familiar with Postman, yo
 
 Karate Xplorer is a desktop application that runs Postman collections and environments locally. It provides:
 
+- **100% Local - Zero Cloud**: Your API keys, tokens, and secrets never leave your machine—no risk of cloud data leakage
 - **Zero Migration Effort**: Run existing collections as-is, no changes needed
 - **Enhanced Feedback**: Pass/fail indicators in navigation tree and detailed output pane
 - **Data-Driven Testing**: Run collections with CSV or JSON data files
-- **Local-First Security**: All data stays on your machine
 - **Enterprise Ready**: Signed desktop application for macOS, Windows, and Linux
 
 ## Key Differentiators
