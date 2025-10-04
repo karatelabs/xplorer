@@ -44,20 +44,20 @@ Reference environment variables using Postman syntax:
 
 **In URLs:**
 ```
-https://{{base_url}}/api/users
+{% raw %}https://{{base_url}}/api/users{% endraw %}
 ```
 
 **In headers:**
 ```
-Authorization: Bearer {{auth_token}}
+{% raw %}Authorization: Bearer {{auth_token}}{% endraw %}
 ```
 
 **In request bodies:**
 ```json
-{
+{% raw %}{
   "userId": "{{user_id}}",
   "environment": "{{env_name}}"
-}
+}{% endraw %}
 ```
 
 **In scripts:**

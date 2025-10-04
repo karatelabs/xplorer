@@ -49,7 +49,7 @@ let username = pm.iterationData.get("username");
 let password = pm.iterationData.get("password");
 
 // Use in URL or body
-// URL: https://{{base_url}}/login?user={{username}}
+{% raw %}// URL: https://{{base_url}}/login?user={{username}}{% endraw %}
 ```
 
 ### JSON Files
@@ -108,15 +108,15 @@ Reference iteration data using variables set in Before scripts:
 
 **URL:**
 ```
-https://{{base_url}}/users/{{current_user}}
+{% raw %}https://{{base_url}}/users/{{current_user}}{% endraw %}
 ```
 
 **Request body:**
 ```json
-{
+{% raw %}{
   "username": "{{current_user}}",
   "password": "{{current_pass}}"
-}
+}{% endraw %}
 ```
 
 ## Execution Behavior
@@ -161,15 +161,15 @@ pm.variables.set("password", pm.iterationData.get("password"));
 
 **Request URL:**
 ```
-POST https://{{base_url}}/auth/login
+{% raw %}POST https://{{base_url}}/auth/login{% endraw %}
 ```
 
 **Request body:**
 ```json
-{
+{% raw %}{
   "email": "{{email}}",
   "password": "{{password}}"
-}
+}{% endraw %}
 ```
 
 **After script:**

@@ -146,7 +146,7 @@ Once imported, the request appears in your collection:
 
 - **Line breaks**: Multi-line cURL commands work fine
 - **Single vs double quotes**: Both are supported
-- **Environment variables**: Replace shell variables (like `$TOKEN`) with Postman variables (like `{{token}}`)
+- **Environment variables**: Replace shell variables (like `$TOKEN`) with Postman variables (like {% raw %}`{{token}}`{% endraw %})
 - **File uploads**: Binary data may not import perfectly; review and adjust
 
 ## Limitations
