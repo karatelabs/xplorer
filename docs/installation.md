@@ -5,7 +5,7 @@ title: Installation
 
 # Installation
 
-Karate Xplorer is a desktop application available for macOS, Windows, and Linux.
+Xplorer is a desktop application available for macOS, Windows, and Linux.
 
 ## Download
 
@@ -55,7 +55,7 @@ Download the latest version for your operating system from the [home page]({{ '/
 
 To verify the installation:
 
-1. Launch Karate Xplorer
+1. Launch Xplorer
 2. You should see the welcome screen with:
    - "Welcome to Xplorer" heading
    - "Open" button
@@ -88,7 +88,7 @@ To update to a newer version:
 ## Uninstalling
 
 **macOS:**
-- Drag Karate Xplorer from Applications to Trash
+- Drag Xplorer from Applications to Trash
 
 **Windows:**
 - Use "Add or Remove Programs" in Windows Settings

@@ -5,7 +5,7 @@ title: Importing Collections
 
 # Importing Collections
 
-Karate Xplorer supports Postman collection formats and can open your existing collections without modification.
+Xplorer can open your existing collections without modification.
 
 ## Supported Formats
 
@@ -57,9 +57,9 @@ Karate Xplorer is designed for zero migration effort:
 
 If you encounter issues:
 
-1. Ensure the file is a valid Postman collection JSON
-2. Check that it's exported from Postman (not manually edited)
-3. Try re-exporting from Postman
+1. Ensure the file is a valid collection JSON
+2. Check that it's exported correctly (not manually edited)
+3. Try re-exporting
 4. Report issues at [GitHub Issues](https://github.com/karatelabs/xplorer/issues)
 
 ## Next Steps

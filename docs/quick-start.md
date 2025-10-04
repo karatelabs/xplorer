@@ -5,11 +5,11 @@ title: Quick Start
 
 # Quick Start Guide
 
-Get up and running with Karate Xplorer in minutes.
+Get up and running with Xplorer in minutes.
 
 ## Opening Your First Collection
 
-Karate Xplorer can open and run your existing Postman collections without any modifications:
+Xplorer can open and run your existing Postman collections without any modifications:
 
 **Three ways to open:**
 1. **File → Open** menu
@@ -42,7 +42,7 @@ If you use Postman environments:
 ## Key Features
 
 - **100% Local - Zero Cloud**: Your secrets never touch the cloud—everything runs on your machine
-- **Zero Migration**: All Postman collections run as-is
+- **Zero Migration**: Existing collections run as-is
 - **JavaScript Support**: Pre-request scripts and tests work unchanged
 - **Enhanced Feedback**: Pass/fail indicators in navigation tree
 - **Secure**: Enterprise-signed desktop application

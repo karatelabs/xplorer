@@ -46,3 +46,9 @@
   border-radius: 0.25rem;
   background-color: var(--bs-secondary-bg);
 }
+
+.animated-adjective {
+  display: inline-block;
+  color: var(--bs-primary);
+  transition: opacity 0.3s ease-in-out;
+}

@@ -5,7 +5,7 @@ title: Interface Overview
 
 # Interface Overview
 
-Karate Xplorer has a minimalistic, familiar interface designed for zero learning curve if you know Postman.
+Xplorer has a minimalistic, familiar interface designed for zero learning curve if you know Postman.
 
 ## Main Layout
 

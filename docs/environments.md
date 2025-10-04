@@ -5,7 +5,7 @@ title: Environments
 
 # Environments
 
-Karate Xplorer supports Postman environment files for managing variables across different configurations.
+Xplorer supports Postman environment files for managing variables across different configurations.
 
 ## Loading Environments
 

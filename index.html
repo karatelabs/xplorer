@@ -7,9 +7,9 @@ title: Home
   <div class="container">
     <div class="row align-items-center">
       <div class="col-lg-6">
-        <h1 class="display-5 fw-bold mb-4">The API Collection Runner <span class="d-block fs-1 fw-normal mt-2">You Always Wanted.</span></h1>
+        <h1 class="display-5 fw-bold mb-4"><span class="animated-adjective">Simple</span> API Client <span class="d-block fs-1 fw-normal mt-2">Done Right</span></h1>
         <p class="lead mb-4">
-          Run existing collections, environments and tests as-is. No migration needed. <strong>100% local execution</strong> - your secrets never touch the cloud.
+          Run existing collections, environments and tests <strong><em>as-is</em></strong>. No migration needed. <strong>100% local</strong> - your secrets never touch the cloud.
         </p>
         <div class="d-flex gap-3 mb-4">
           <button id="download-btn" class="btn btn-primary btn-lg">
@@ -35,7 +35,7 @@ title: Home
 </div>
 
 <div class="container my-5" id="features">
-  <h2 class="text-center mb-5">Why Choose Karate Xplorer?</h2>
+  <h2 class="text-center mb-5">Why Xplorer?</h2>
   <div class="row g-4">
     <div class="col-md-4">
       <div class="text-center">
@@ -100,7 +100,7 @@ title: Home
 <div class="cta-section py-5 mt-5">
   <div class="container text-center">
     <h2 class="mb-4">Ready to Get Started?</h2>
-    <p class="lead mb-4">Download Karate Xplorer and start using your existing collections today.</p>
+    <p class="lead mb-4">Download Xplorer and start using your existing collections today.</p>
     <button id="download-btn-bottom" class="btn btn-primary btn-lg">
       <i class="bi bi-download me-2"></i>
       <span id="download-text-bottom">Download Now</span>
@@ -248,4 +248,20 @@ title: Home
   document.getElementById('os-name').textContent = primaryDownload.name;
   document.getElementById('download-btn').onclick = () => window.location.href = getDownloadUrl(primaryDownload.key);
   document.getElementById('download-btn-bottom').onclick = () => window.location.href = getDownloadUrl(primaryDownload.key);
+
+  // Animated adjective rotation
+  const adjectives = ['Simple', 'Capable', 'Local', 'Secure', 'Fast'];
+  const adjectiveElement = document.querySelector('.animated-adjective');
+  let currentIndex = 0;
+
+  function rotateAdjective() {
+    adjectiveElement.style.opacity = '0';
+    setTimeout(() => {
+      currentIndex = (currentIndex + 1) % adjectives.length;
+      adjectiveElement.textContent = adjectives[currentIndex];
+      adjectiveElement.style.opacity = '1';
+    }, 300);
+  }
+
+  setInterval(rotateAdjective, 2000);
 </script>

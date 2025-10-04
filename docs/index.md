@@ -5,13 +5,13 @@ title: Documentation
 
 # Documentation
 
-Welcome to the Karate Xplorer documentation. If you're familiar with Postman, you'll be productive immediately—no learning curve required.
+Welcome to Xplorer! If you have worked with any API client, you'll be productive immediately. Zero learning curve.
 
-![Karate Xplorer Interface]({{ '/assets/images/docs/xplorer-ui.png' | relative_url }})
+![Xplorer Interface]({{ '/assets/images/docs/xplorer-ui.png' | relative_url }})
 
 ## Overview
 
-Karate Xplorer is a desktop application that runs Postman collections and environments locally. It provides:
+Xplorer is a desktop application that runs Postman collections and environments locally. It provides:
 
 - **100% Local - Zero Cloud**: Your API keys, tokens, and secrets never leave your machine—no risk of cloud data leakage
 - **Zero Migration Effort**: Run existing collections as-is, no changes needed
@@ -22,7 +22,7 @@ Karate Xplorer is a desktop application that runs Postman collections and enviro
 ## Key Differentiators
 
 ### Superior Test Feedback
-Unlike Postman, Karate Xplorer shows pass/fail indicators directly in the navigation tree, making it easy to see test results at a glance. The output pane provides detailed HTML reports with assertion details.
+Xplorer shows pass/fail indicators directly in the navigation tree, making it easy to see test results at a glance. The output pane provides detailed HTML reports with assertion details.
 
 ### Data-Driven Testing
 Easily run collections with different data sets using the CSV/JSON tab. Perfect for testing multiple scenarios without duplicating requests.
@@ -31,13 +31,13 @@ Easily run collections with different data sets using the CSV/JSON tab. Perfect 
 Quickly convert cURL commands to requests using the Import pane. Great for adding examples from API documentation.
 
 ### Simple Environment Handling
-One active environment at a time keeps things simple and predictable. Environment variables are displayed in the Environment pane and update in real-time during execution.
+One active environment at a time keeps things simple. Environment variables are displayed in the Environment pane and update in real-time during execution. Drag and drop another environment file at any time to apply it.
 
 ## Getting Started
 
 Use the navigation on the left to explore the documentation. We recommend starting with:
 
-1. **[Installation]({{ '/docs/installation/' | relative_url }})** - Download and install Karate Xplorer
+1. **[Installation]({{ '/docs/installation/' | relative_url }})** - Download and install Xplorer
 2. **[Quick Start]({{ '/docs/quick-start/' | relative_url }})** - Get running in minutes
 3. **[Interface Overview]({{ '/docs/interface/' | relative_url }})** - Understand the UI layout
 
