@@ -118,6 +118,21 @@ Right-click on tree items for actions:
 
 Click any request or folder name to edit it inline. Press Enter or click away to save.
 
+## Themes & Display Options
+
+Karate Xplorer supports multiple themes including dark mode, perfect for different working environments and presentations.
+
+**Theme Support:**
+- Light and dark modes available
+- Seamless theme switching
+
+**Font Size Shortcuts:**
+- **Cmd/Ctrl +** - Increase font size
+- **Cmd/Ctrl -** - Decrease font size
+- **Cmd/Ctrl 0** - Reset to default
+
+These shortcuts are ideal for presentations and demos, allowing API product owners to quickly adjust visibility for their audience.
+
 ## Clearing Results
 
 Clear execution results at any level:
