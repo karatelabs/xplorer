@@ -16,9 +16,12 @@ title: Home
             <i class="bi bi-download me-2"></i>
             <span id="download-text">Download for <span id="os-name">Your OS</span></span>
           </button>
-          <a href="https://youtu.be/3u0i-vdD0mg?si=9elNmYpLgEyROGJY" class="btn btn-outline-secondary btn-lg">
+          <button class="btn btn-outline-primary btn-lg" data-bs-toggle="modal" data-bs-target="#downloadModal">
+            <i class="bi bi-list me-2"></i>All Downloads
+          </button>
+          <button class="btn btn-outline-secondary btn-lg" data-bs-toggle="modal" data-bs-target="#videoModal">
             <i class="bi bi-play-circle me-2"></i>Watch Video
-          </a>
+          </button>
         </div>
         <p class="text-muted small">
           <i class="bi bi-shield-check me-1"></i>Enterprise signed • Perpetually free
@@ -30,13 +33,8 @@ title: Home
           <i class="bi bi-ubuntu me-1"></i>Linux
         </p>
       </div>
-      <div class="col-lg-6 d-flex align-items-center justify-content-center">
-        <div class="text-center">
-          <div style="background-color: #333; border-radius: 20px; padding: 2rem; display: inline-block; margin-bottom: 2rem;">
-            <img src="assets/images/logo-man.svg" alt="Karate" style="width: 120px; height: 120px;">
-          </div>
-          <h2 class="display-5 fw-bold">Karate<br>Xplorer</h2>
-        </div>
+      <div class="col-lg-6">
+        <img src="assets/images/docs/xplorer-ui.png" alt="Karate Xplorer Interface" class="img-fluid rounded shadow-lg">
       </div>
     </div>
   </div>
@@ -119,16 +117,108 @@ title: Home
   </div>
 </div>
 
+<!-- Video Coming Soon Modal -->
+<div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="videoModalLabel">Video Demo</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center py-5">
+        <i class="bi bi-camera-video display-1 text-muted mb-3"></i>
+        <h4 class="mb-3">Coming Soon!</h4>
+        <p class="text-muted">We're preparing a comprehensive video demonstration of Karate Xplorer. Check back soon!</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Download Modal -->
+<div class="modal fade" id="downloadModal" tabindex="-1" aria-labelledby="downloadModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="downloadModalLabel">Download Karate Xplorer</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="list-group">
+          <a href="#" id="download-mac-silicon" class="list-group-item list-group-item-action d-flex align-items-center">
+            <i class="bi bi-apple fs-4 me-3"></i>
+            <div>
+              <h6 class="mb-0">macOS (Apple Silicon)</h6>
+              <small class="text-muted">For M1, M2, M3 Macs</small>
+            </div>
+          </a>
+          <a href="#" id="download-mac-intel" class="list-group-item list-group-item-action d-flex align-items-center">
+            <i class="bi bi-apple fs-4 me-3"></i>
+            <div>
+              <h6 class="mb-0">macOS (Intel)</h6>
+              <small class="text-muted">For Intel-based Macs</small>
+            </div>
+          </a>
+          <a href="#" id="download-windows" class="list-group-item list-group-item-action d-flex align-items-center">
+            <i class="bi bi-windows fs-4 me-3"></i>
+            <div>
+              <h6 class="mb-0">Windows</h6>
+              <small class="text-muted">64-bit Windows installer</small>
+            </div>
+          </a>
+          <a href="#" id="download-linux" class="list-group-item list-group-item-action d-flex align-items-center">
+            <i class="bi bi-ubuntu fs-4 me-3"></i>
+            <div>
+              <h6 class="mb-0">Linux</h6>
+              <small class="text-muted">Debian package (64-bit)</small>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script>
-  // OS detection and download link
-  const RELEASE_URL = 'https://github.com/ptrthomas/xplorer-beta-testing/releases/tag/v2.0.0';
+  // Configuration - change this to update release location
+  const RELEASE_BASE_URL = 'https://github.com/ptrthomas/xplorer-beta-testing/releases/download/v2.0.0';
+  const VERSION = '2.0.0';
+
+  // Download file definitions
+  const DOWNLOADS = {
+    macSilicon: {
+      file: `Xplorer-macosx-aarch64-${VERSION}.dmg`,
+      name: 'macOS (Apple Silicon)',
+      detectedOS: 'mac-silicon'
+    },
+    macIntel: {
+      file: `Xplorer-macosx-x86_64-${VERSION}.dmg`,
+      name: 'macOS (Intel)',
+      detectedOS: 'mac-intel'
+    },
+    windows: {
+      file: `Xplorer-win32-x86_64-${VERSION}.msi`,
+      name: 'Windows',
+      detectedOS: 'windows'
+    },
+    linux: {
+      file: `Xplorer-linux-x86_64-${VERSION}.deb`,
+      name: 'Linux',
+      detectedOS: 'linux'
+    }
+  };
 
   function detectOS() {
     const userAgent = window.navigator.userAgent.toLowerCase();
     const platform = window.navigator.platform.toLowerCase();
 
     if (platform.includes('mac') || userAgent.includes('mac')) {
-      return 'mac';
+      // Detect Apple Silicon vs Intel
+      // This is a heuristic - checking for arm64 in user agent or using feature detection
+      if (userAgent.includes('arm') || (window.navigator.userAgentData &&
+          window.navigator.userAgentData.platform === 'macOS')) {
+        return 'mac-silicon';
+      }
+      return 'mac-intel';
     } else if (platform.includes('win') || userAgent.includes('win')) {
       return 'windows';
     } else if (platform.includes('linux') || userAgent.includes('linux')) {
@@ -137,38 +227,31 @@ title: Home
     return 'unknown';
   }
 
-  function getDownloadInfo(os) {
-    // Map to release asset names from https://github.com/ptrthomas/xplorer-beta-testing/releases/tag/v2.0.0
-    const downloads = {
-      'mac': {
-        name: 'macOS',
-        url: RELEASE_URL,
-        icon: 'apple'
-      },
-      'windows': {
-        name: 'Windows',
-        url: RELEASE_URL,
-        icon: 'windows'
-      },
-      'linux': {
-        name: 'Linux',
-        url: RELEASE_URL,
-        icon: 'ubuntu'
-      },
-      'unknown': {
-        name: 'Your OS',
-        url: RELEASE_URL,
-        icon: 'download'
-      }
-    };
-    return downloads[os];
+  function getDownloadUrl(downloadKey) {
+    return `${RELEASE_BASE_URL}/${DOWNLOADS[downloadKey].file}`;
   }
 
-  // Set download buttons
-  const os = detectOS();
-  const downloadInfo = getDownloadInfo(os);
+  function getPrimaryDownload(os) {
+    switch(os) {
+      case 'mac-silicon': return { key: 'macSilicon', ...DOWNLOADS.macSilicon };
+      case 'mac-intel': return { key: 'macIntel', ...DOWNLOADS.macIntel };
+      case 'windows': return { key: 'windows', ...DOWNLOADS.windows };
+      case 'linux': return { key: 'linux', ...DOWNLOADS.linux };
+      default: return { key: 'macSilicon', ...DOWNLOADS.macSilicon };
+    }
+  }
 
-  document.getElementById('os-name').textContent = downloadInfo.name;
-  document.getElementById('download-btn').onclick = () => window.location.href = downloadInfo.url;
-  document.getElementById('download-btn-bottom').onclick = () => window.location.href = downloadInfo.url;
+  // Setup download links in modal
+  document.getElementById('download-mac-silicon').href = getDownloadUrl('macSilicon');
+  document.getElementById('download-mac-intel').href = getDownloadUrl('macIntel');
+  document.getElementById('download-windows').href = getDownloadUrl('windows');
+  document.getElementById('download-linux').href = getDownloadUrl('linux');
+
+  // Set primary download buttons
+  const os = detectOS();
+  const primaryDownload = getPrimaryDownload(os);
+
+  document.getElementById('os-name').textContent = primaryDownload.name;
+  document.getElementById('download-btn').onclick = () => window.location.href = getDownloadUrl(primaryDownload.key);
+  document.getElementById('download-btn-bottom').onclick = () => window.location.href = getDownloadUrl(primaryDownload.key);
 </script>

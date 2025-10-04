@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: docs
 title: Quick Start
 ---
 
@@ -7,45 +7,48 @@ title: Quick Start
 
 Get up and running with Karate Xplorer in minutes.
 
-## 1. Import Your Postman Collection
+## Opening Your First Collection
 
-Karate Xplorer can import and run your existing Postman collections without any modifications:
+Karate Xplorer can open and run your existing Postman collections without any modifications:
 
-1. Click **File → Import**
-2. Select your Postman collection file (`.json`)
-3. Your collection will appear in the sidebar
+**Three ways to open:**
+1. **File → Open** menu
+2. **Drag and drop** files into the window
+3. **Recent files** list from File menu
 
-## 2. Import Environment (Optional)
+## Loading an Environment (Optional)
 
 If you use Postman environments:
 
-1. Click **File → Import Environment**
-2. Select your environment file (`.json`)
-3. Select the environment from the dropdown
+1. Use **File → Open** or drag and drop your environment JSON file
+2. The environment appears in the **Environment Pane** (right panel)
+3. Only one environment can be active at a time
+4. Environment variables are available to all loaded collections
 
-## 3. Run a Request
+## Running a Request
 
-1. Navigate to any request in your collection
-2. Click the **Send** button
+1. Navigate to any request in the navigation tree (left panel)
+2. Click the **Run** button or click the play icon in the tree
 3. View the response in the response panel
+4. Check the **Output Pane** (right panel) for test results
 
-## 4. Run Tests
+## Running Collections or Folders
 
-If your collection includes tests:
-
-1. Select a collection or folder
-2. Click **Run Collection**
-3. View test results in the runner
+1. Select a folder or the root collection
+2. Click the **Run** button
+3. Pass/fail indicators appear in the navigation tree
+4. View aggregated results in the Output pane
 
 ## Key Features
 
-- **Zero Migration**: All Postman collection formats supported
-- **JavaScript Support**: Pre-request scripts and tests work as-is
-- **Environments**: Full support for environment variables
+- **Zero Migration**: All Postman collections run as-is
+- **JavaScript Support**: Pre-request scripts and tests work unchanged
+- **Enhanced Feedback**: Pass/fail indicators in navigation tree
 - **Local-First**: All data stays on your machine
+- **Secure**: Enterprise-signed desktop application
 
 ## Next Steps
 
-- Learn about [Running Tests](running-tests.html)
-- Understand [Environments and Variables](environments.html)
-- Explore [Scripting](scripting.html)
+- Learn about [Interface Overview](interface/)
+- Understand [Running Collections](running/)
+- Try [Data-Driven Testing](data-driven/)
