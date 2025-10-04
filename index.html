@@ -1,0 +1,174 @@
+---
+layout: default
+title: Home
+---
+
+<div class="hero-section">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <h1 class="display-4 fw-bold mb-4">The API Collection Runner Alternative <span class="d-block fs-3 fw-normal mt-2">You've Been Waiting For</span></h1>
+        <p class="lead mb-4">
+          Run existing collections, environments and tests as-is. No migration needed. Secure, local-first, and enterprise-ready.
+        </p>
+        <div class="d-flex gap-3 mb-4">
+          <button id="download-btn" class="btn btn-primary btn-lg">
+            <i class="bi bi-download me-2"></i>
+            <span id="download-text">Download for <span id="os-name">Your OS</span></span>
+          </button>
+          <a href="https://youtu.be/3u0i-vdD0mg?si=9elNmYpLgEyROGJY" class="btn btn-outline-secondary btn-lg">
+            <i class="bi bi-play-circle me-2"></i>Watch Video
+          </a>
+        </div>
+        <p class="text-muted small">
+          <i class="bi bi-shield-check me-1"></i>Enterprise signed • Perpetually free
+          <span class="mx-2">•</span>
+          <i class="bi bi-apple me-1"></i>macOS
+          <span class="mx-2">•</span>
+          <i class="bi bi-windows me-1"></i>Windows
+          <span class="mx-2">•</span>
+          <i class="bi bi-ubuntu me-1"></i>Linux
+        </p>
+      </div>
+      <div class="col-lg-6 d-flex align-items-center justify-content-center">
+        <div class="text-center">
+          <div style="background-color: #333; border-radius: 20px; padding: 2rem; display: inline-block; margin-bottom: 2rem;">
+            <img src="assets/images/logo-man.svg" alt="Karate" style="width: 120px; height: 120px;">
+          </div>
+          <h2 class="display-5 fw-bold">Karate<br>Xplorer</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container my-5" id="features">
+  <h2 class="text-center mb-5">Why Choose Karate Xplorer?</h2>
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="text-center">
+        <div class="feature-icon text-primary">
+          <i class="bi bi-cash-coin"></i>
+        </div>
+        <h4>No Pricing Surprises</h4>
+        <p class="text-muted">Avoid unexpected pricing changes. Transparent, fair pricing from a company that respects your investment.</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="text-center">
+        <div class="feature-icon text-primary">
+          <i class="bi bi-shield-lock"></i>
+        </div>
+        <h4>Secure & Local-First</h4>
+        <p class="text-muted">Your data stays on your machine. No cloud leakage, no security concerns. Perfect for enterprises.</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="text-center">
+        <div class="feature-icon text-primary">
+          <i class="bi bi-arrow-repeat"></i>
+        </div>
+        <h4>Zero Migration Effort</h4>
+        <p class="text-muted">Import and run existing collections instantly. All standard formats and JS assertion syntax supported.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="row g-4 mt-4">
+    <div class="col-md-4">
+      <div class="text-center">
+        <div class="feature-icon text-primary">
+          <i class="bi bi-ui-checks"></i>
+        </div>
+        <h4>Familiar Interface</h4>
+        <p class="text-muted">Minimalistic UI with zero learning curve. Intuitive design that feels instantly familiar.</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="text-center">
+        <div class="feature-icon text-primary">
+          <i class="bi bi-pencil-square"></i>
+        </div>
+        <h4>Edit & Maintain</h4>
+        <p class="text-muted">Edit existing tests and collections. Choose if and when you want to migrate.</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="text-center">
+        <div class="feature-icon text-primary">
+          <i class="bi bi-building"></i>
+        </div>
+        <h4>Enterprise Ready</h4>
+        <p class="text-muted">Signed desktop application for Mac, Windows, and Linux. Ready for enterprise deployment.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="cta-section py-5 mt-5">
+  <div class="container text-center">
+    <h2 class="mb-4">Ready to Get Started?</h2>
+    <p class="lead mb-4">Download Karate Xplorer and start using your existing collections today.</p>
+    <button id="download-btn-bottom" class="btn btn-primary btn-lg">
+      <i class="bi bi-download me-2"></i>
+      <span id="download-text-bottom">Download Now</span>
+    </button>
+    <p class="mt-3 text-muted small">
+      <a href="https://github.com/karatelabs/xplorer/releases" class="text-decoration-none">View all releases</a>
+    </p>
+  </div>
+</div>
+
+<script>
+  // OS detection and download link
+  const RELEASE_URL = 'https://github.com/ptrthomas/xplorer-beta-testing/releases/tag/v2.0.0';
+
+  function detectOS() {
+    const userAgent = window.navigator.userAgent.toLowerCase();
+    const platform = window.navigator.platform.toLowerCase();
+
+    if (platform.includes('mac') || userAgent.includes('mac')) {
+      return 'mac';
+    } else if (platform.includes('win') || userAgent.includes('win')) {
+      return 'windows';
+    } else if (platform.includes('linux') || userAgent.includes('linux')) {
+      return 'linux';
+    }
+    return 'unknown';
+  }
+
+  function getDownloadInfo(os) {
+    // Map to release asset names from https://github.com/ptrthomas/xplorer-beta-testing/releases/tag/v2.0.0
+    const downloads = {
+      'mac': {
+        name: 'macOS',
+        url: RELEASE_URL,
+        icon: 'apple'
+      },
+      'windows': {
+        name: 'Windows',
+        url: RELEASE_URL,
+        icon: 'windows'
+      },
+      'linux': {
+        name: 'Linux',
+        url: RELEASE_URL,
+        icon: 'ubuntu'
+      },
+      'unknown': {
+        name: 'Your OS',
+        url: RELEASE_URL,
+        icon: 'download'
+      }
+    };
+    return downloads[os];
+  }
+
+  // Set download buttons
+  const os = detectOS();
+  const downloadInfo = getDownloadInfo(os);
+
+  document.getElementById('os-name').textContent = downloadInfo.name;
+  document.getElementById('download-btn').onclick = () => window.location.href = downloadInfo.url;
+  document.getElementById('download-btn-bottom').onclick = () => window.location.href = downloadInfo.url;
+</script>

@@ -1,0 +1,31 @@
+# Jekyll Configuration
+title: Karate Xplorer
+description: A Postman emulator - run existing collections, environments and tests as-is
+url: "https://karatelabs.github.io"
+baseurl: "/xplorer"
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+# Collections
+collections:
+  docs:
+    output: true
+    permalink: /docs/:path/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "docs"
+    values:
+      layout: "default"
+
+# Exclude from processing
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor

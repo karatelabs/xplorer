@@ -1,0 +1,13 @@
+<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Main X shape with martial arts inspired angular cuts -->
+  <g id="x-logo">
+    <!-- Left stroke of X (top-left to bottom-right) -->
+    <path d="M 20 15 L 35 15 L 85 85 L 70 85 Z" fill="#FFFFFF"/>
+
+    <!-- Right stroke of X (top-right to bottom-left) -->
+    <path d="M 65 15 L 80 15 L 30 85 L 15 85 Z" fill="#FFFFFF"/>
+
+    <!-- Center diamond accent (karate belt knot inspired) -->
+    <path d="M 50 45 L 55 50 L 50 55 L 45 50 Z" fill="#FF6B35"/>
+  </g>
+</svg>

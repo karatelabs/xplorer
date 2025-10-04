@@ -1,0 +1,48 @@
+/* Custom styles for Karate Xplorer */
+
+:root {
+  --bs-body-bg: #ffffff;
+  --bs-body-color: #212529;
+  --logo-path: url('../images/logo.svg');
+  --hero-bg: #f8f9fa;
+  --cta-bg: #f8f9fa;
+}
+
+[data-bs-theme="dark"] {
+  --bs-body-bg: #212529;
+  --bs-body-color: #dee2e6;
+  --logo-path: url('../images/logo-dark.svg');
+  --hero-bg: #1a1d20;
+  --cta-bg: #1a1d20;
+}
+
+.navbar-brand img {
+  height: 40px;
+}
+
+.hero-section {
+  padding: 4rem 0;
+  background-color: var(--hero-bg) !important;
+}
+
+.cta-section {
+  background-color: var(--cta-bg) !important;
+}
+
+.feature-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.btn-primary {
+  padding: 0.75rem 2rem;
+  font-size: 1.1rem;
+}
+
+.download-badge {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+  border-radius: 0.25rem;
+  background-color: var(--bs-secondary-bg);
+}

@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="{{ '/' | relative_url }}">
+      <img src="{{ '/assets/images/logo-dark.svg' | relative_url }}" alt="Karate Xplorer">
+      Karate Xplorer
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="{{ '/#features' | relative_url }}">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ '/docs/' | relative_url }}">Documentation</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.karatelabs.io/pricing">Pricing</a>
+        </li>
+        <li class="nav-item">
+          <button id="theme-toggle" class="btn btn-link nav-link" aria-label="Toggle theme">
+            <i class="bi bi-moon-fill"></i>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
