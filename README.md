@@ -28,7 +28,7 @@ Installation • Quick Start • Features • User Guide
 <div align="center">
 
 [:arrow_down: Download](https://karatelabs.github.io/xplorer) •
-[:tv: Watch Demo](https://youtu.be/3u0i-vdD0mg?si=9elNmYpLgEyROGJY) •
+[:tv: Watch Demo](https://youtu.be/ELekzGC7mC4?si=KIRGR1PAJ1boC5xV) •
 [:heavy_dollar_sign: Pricing](https://www.karatelabs.io/pricing) •
 [:octocat: Report Issues](https://github.com/karatelabs/xplorer/issues)
 
