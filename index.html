@@ -116,18 +116,18 @@ title: Home
   </div>
 </div>
 
-<!-- Video Coming Soon Modal -->
+<!-- Video Modal -->
 <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="videoModalLabel">Video Demo</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body text-center py-5">
-        <i class="bi bi-camera-video display-1 text-muted mb-3"></i>
-        <h4 class="mb-3">Coming Soon!</h4>
-        <p class="text-muted">We're preparing a comprehensive video demonstration of Karate Xplorer. Check back soon!</p>
+      <div class="modal-body p-0">
+        <div class="ratio ratio-16x9">
+          <iframe id="youtubeVideo" src="" title="Xplorer Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
       </div>
     </div>
   </div>
@@ -269,4 +269,19 @@ title: Home
   }
 
   setInterval(rotateAdjective, 2000);
+
+  // Video modal functionality
+  const videoModal = document.getElementById('videoModal');
+  const youtubeIframe = document.getElementById('youtubeVideo');
+  const videoSrc = 'https://www.youtube.com/embed/ELekzGC7mC4?autoplay=1&si=KIRGR1PAJ1boC5xV';
+
+  // Set video source when modal is shown
+  videoModal.addEventListener('show.bs.modal', function () {
+    youtubeIframe.src = videoSrc;
+  });
+
+  // Clear video source when modal is hidden to stop playback
+  videoModal.addEventListener('hide.bs.modal', function () {
+    youtubeIframe.src = '';
+  });
 </script>
