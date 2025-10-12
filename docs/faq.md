@@ -82,13 +82,14 @@ Xplorer is **perpetually free** for its core features. This is intended for team
 
 We will offer an optional paid upgrade (currently estimated at $200/user/year) for advanced, enterprise-focused capabilities, including:
 
-- Saving and sharing HTML reports
-- A CI/CD runner to execute collections alongside other tests (like JUnit or Karate)
-- Parallel execution for faster runs
-- The ability to step-through and debug collections
-- Re-using collections as performance tests
-- MCP / LLM integration
-- Importing OpenAPI/Swagger specs to generate Karate tests
+- Step-through debugging for Postman tests
+- Parallel execution to dramatically cut down collection run times
+- Hybrid CI/CD suites that mix Postman and Karate tests
+- Re-using Postman collections as performance tests
+- OpenAPI and Swagger import
+- Recording API tests directly from the browser
+- LLM / MCP integration to speed up test creation
+- Ability to create mocks from OpenAPI or Swagger specs
 
 ## Getting Started & Support
 
