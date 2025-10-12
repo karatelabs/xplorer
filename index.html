@@ -31,6 +31,9 @@ title: Home
         <p class="text-muted small">
           <i class="bi bi-shield-lock me-1"></i>100% Local • Free Forever • Enterprise ready • macOS • Windows • Linux
         </p>
+        <p class="text-muted small">
+          Latest version: <strong><a href="https://github.com/karatelabs/xplorer/releases" class="text-decoration-none" id="version-link"><span id="version-number">2.0.1</span></a></strong> (<span id="release-date">2025-01-15</span>)
+        </p>
       </div>
       <div class="col-lg-6">
         <img src="assets/images/docs/xplorer-ui.png" alt="Karate Xplorer Interface" class="img-fluid rounded shadow-lg">
@@ -139,7 +142,7 @@ title: Home
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="downloadModalLabel">Download Karate Xplorer</h5>
+        <h5 class="modal-title" id="downloadModalLabel">Download Karate Xplorer <small class="text-muted">v<span id="modal-version-number">2.0.1</span></small></h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -181,6 +184,7 @@ title: Home
 <script>
   // change this to update release location
   const VERSION = '2.0.1';
+  const RELEASE_DATE = '2025-10-12'; // ISO format: YYYY-MM-DD
   const RELEASE_BASE_URL = 'https://github.com/ptrthomas/xplorer-beta-testing/releases/download/v' + VERSION;  
 
   // Download file definitions
@@ -254,6 +258,19 @@ title: Home
   document.getElementById('os-name').textContent = primaryDownload.name;
   document.getElementById('download-btn').onclick = () => window.location.href = getDownloadUrl(primaryDownload.key);
   document.getElementById('download-btn-bottom').onclick = () => window.location.href = getDownloadUrl(primaryDownload.key);
+
+  // Update version numbers and date in the UI
+  document.getElementById('version-number').textContent = VERSION;
+  document.getElementById('modal-version-number').textContent = VERSION;
+
+  // Format date according to user's locale
+  const releaseDate = new Date(RELEASE_DATE);
+  const formattedDate = releaseDate.toLocaleDateString(undefined, {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric'
+  });
+  document.getElementById('release-date').textContent = formattedDate;
 
   // Animated adjective rotation
   const adjectives = ['Simple', 'Easy', 'Lightweight', 'Capable', 'Local', 'Secure', 'Fast', 'Done Right.'];
