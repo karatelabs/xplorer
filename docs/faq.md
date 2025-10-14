@@ -99,4 +99,4 @@ You can download the latest version for your operating system from the official 
 
 ### Where can I find the documentation?
 
-For detailed guides and information on all of Xplorer's features, please visit our [documentation](/xplorer/docs).
+For detailed guides and information on all of Xplorer's features, please visit our [documentation]({{ '/docs/' | relative_url }}).
