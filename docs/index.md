@@ -14,6 +14,7 @@ Welcome to Xplorer! If you have worked with any API client, you'll know what to 
 Xplorer is a desktop application that runs collections and environments (Postman format) locally. It provides:
 
 - **100% Local - Zero Cloud**: Your API keys, tokens, and secrets never leave your machine. No CORS issues, no cloud routing and no agents to configure. Test localhost and internal APIs directly without security risks.
+- **OAuth 2.0 Support**: Full OAuth 2.0 authentication with system browser integration. Supports Authorization Code, PKCE, and Client Credentials flows.
 - **Zero Migration Effort**: Run existing collections as-is, no changes needed
 - **Enhanced Feedback**: Pass/fail indicators in navigation tree and detailed output pane
 - **Data-Driven Testing**: Run collections with CSV or JSON data files
