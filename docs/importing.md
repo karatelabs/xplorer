@@ -9,10 +9,19 @@ Xplorer can open your existing collections. There is no migration step. It is th
 
 ## Supported Formats
 
+**Collections & Environments:**
 - Postman Collection v2.0
 - Postman Collection v2.1
 - Environment JSON files
 - All standard JavaScript assertion syntax
+
+**API Specifications:**
+- OpenAPI 3.1
+- OpenAPI 3.0
+- Swagger 2.0
+- JSON and YAML formats
+
+See [API Spec Navigator]({{ '/docs/openapi/' | relative_url }}) for details on working with API specifications.
 
 ## Opening Collections
 

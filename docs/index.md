@@ -14,6 +14,7 @@ Welcome to Xplorer! If you have worked with any API client, you'll know what to 
 Xplorer is a desktop application that runs collections and environments (Postman format) locally. It provides:
 
 - **100% Local - Zero Cloud**: Your API keys, tokens, and secrets never leave your machine. No CORS issues, no cloud routing and no agents to configure. Test localhost and internal APIs directly without security risks.
+- **API Spec Navigator**: Browse and test APIs directly from OpenAPI/Swagger specs. Navigate schemas, view documentation, and build live requests.
 - **OAuth 2.0 Support**: Full OAuth 2.0 authentication with system browser integration. Supports Authorization Code, PKCE, and Client Credentials flows.
 - **Zero Migration Effort**: Run existing collections as-is, no changes needed
 - **Enhanced Feedback**: Pass/fail indicators in navigation tree and detailed output pane
@@ -34,6 +35,9 @@ Easily run collections with different data sets using the CSV/JSON tab. Perfect 
 ### cURL Import
 Quickly convert cURL commands to requests using the Import pane. Great for adding examples from API documentation.
 
+### API Spec Navigator
+Open any OpenAPI or Swagger specification and instantly browse all endpoints. View complete schema documentation with reference traversal, build sample JSON payloads, select which fields to include, and go from spec to live request with one click. Perfect for API exploration and testing.
+
 ### Simple Environment Handling
 One active environment at a time keeps things simple. Environment variables are displayed in the Environment pane and update in real-time during execution. Drag and drop another environment file at any time to apply it.
 
@@ -44,6 +48,7 @@ Use the navigation on the left to explore the documentation. We recommend starti
 1. **[Installation]({{ '/docs/installation/' | relative_url }})** - Download and install Xplorer
 2. **[Quick Start]({{ '/docs/quick-start/' | relative_url }})** - Get running in minutes
 3. **[Interface Overview]({{ '/docs/interface/' | relative_url }})** - Understand the UI layout
+4. **[API Spec Navigator]({{ '/docs/openapi/' | relative_url }})** - Browse and test APIs from OpenAPI/Swagger specs
 
 ## Need Help?
 
