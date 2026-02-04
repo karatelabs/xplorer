@@ -17,7 +17,7 @@ The following features require an active Xplorer subscription:
 | [Browser Agent Server]({{ '/docs/browser-agent/' | relative_url }}) | LLM-driven browser automation via HTTP API |
 | [Karate Export]({{ '/docs/karate-export/' | relative_url }}) | Export Postman collections to Karate feature files |
 | [OpenAPI "Try It"]({{ '/docs/openapi/' | relative_url }}) | Execute API requests directly from OpenAPI spec |
-| Karate Runner | Run Karate test files |
+| [Karate Runner]({{ '/docs/karate-runner/' | relative_url }}) | Run Karate test files with real-time output |
 
 Core Xplorer features (collections, environments, importing) are available without sign-in.
 
