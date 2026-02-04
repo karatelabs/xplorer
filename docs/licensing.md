@@ -15,6 +15,7 @@ The following features require an active Xplorer subscription:
 |---------|-------------|
 | [Recording API Requests]({{ '/docs/recording-api/' | relative_url }}) | Capture browser API traffic and export as AI prompts or curl |
 | [Browser Agent Server]({{ '/docs/browser-agent/' | relative_url }}) | LLM-driven browser automation via HTTP API |
+| [Karate Export]({{ '/docs/karate-export/' | relative_url }}) | Export Postman collections to Karate feature files |
 | [OpenAPI "Try It"]({{ '/docs/openapi/' | relative_url }}) | Execute API requests directly from OpenAPI spec |
 | Karate Runner | Run Karate test files |
 
