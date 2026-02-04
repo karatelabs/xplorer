@@ -9,10 +9,6 @@ title: Karate Export
 
 Export Postman collections to [Karate](https://karatelabs.io/karate) feature files for API test automation.
 
-## Prerequisites
-
-This feature requires an active Xplorer subscription. Go to **Help > License** to sign in. See [Licensing & Sign-In]({{ '/docs/licensing/' | relative_url }}) for details.
-
 ## Quick Start
 
 1. Open a Postman collection file (or drag and drop)
@@ -53,5 +49,5 @@ You can also export a single request or folder instead of the entire collection:
 
 ## Next Steps
 
-- [Licensing & Sign-In]({{ '/docs/licensing/' | relative_url }}) - Manage your subscription
+- [Karate Runner]({{ '/docs/karate-runner/' | relative_url }}) - Run Karate tests in Xplorer
 - [cURL Export]({{ '/docs/curl-export/' | relative_url }}) - Export as cURL commands
