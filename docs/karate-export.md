@@ -21,6 +21,8 @@ This feature requires an active Xplorer subscription. Go to **Help > License** t
 4. Change export type to **Karate**
 5. Click **Save to Folder**
 
+![Karate Export]({{ '/assets/images/docs/export-karate.png' | relative_url }})
+
 The converter generates Karate feature files with:
 - `karate-config.js` with collection variables
 - Feature files for each folder
