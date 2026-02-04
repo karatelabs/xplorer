@@ -11,15 +11,28 @@ Xplorer has a minimalistic, familiar interface designed for zero learning curve 
 
 The application has three main areas:
 
-- **Left Panel (Folders)**: Tree navigation showing your collection structure
-- **Center Panel**: Request details and response viewer
-- **Right Panel**: Output, Environment, and Import tools
+- **Left Navigation Bar**: Switch between Karate, Collection, OpenAPI/Spec, and Agent views
+- **Center Panel**: Request details, editor, or feature-specific content
+- **Right Panel**: Output, Environment, Documentation, Import/Export tools
 
 ![Application Overview]({{ '/assets/images/docs/app-overview.png' | relative_url }})
 
-## Left Panel: Navigation
+## Left Navigation Bar
 
-The navigation pane displays your collection hierarchy as a tree.
+The left navigation bar provides access to different modes:
+
+| Button | Description |
+|--------|-------------|
+| **Karate** | Karate project browser and test runner |
+| **Collection** | Postman-style collection tree view |
+| **OpenAPI / Spec** | OpenAPI specification navigator |
+| **Agent** | AI Agent features (Recording, Browser Automation) |
+
+Click a button to switch views. The center panel updates to show the selected mode's content.
+
+## Collection View
+
+When the **Collection** button is selected, the navigation pane displays your collection hierarchy as a tree.
 
 **Visual elements:**
 - HTTP method labels (GET, POST, PUT, etc.) for requests
@@ -76,7 +89,16 @@ When a **folder or root collection** is selected, you'll see:
 
 ## Right Panel: Tools
 
-Toggle between three panes using the right toolbar:
+Toggle between panes using the right toolbar:
+
+| Button | Description |
+|--------|-------------|
+| **Output** | Test execution results and logs |
+| **Environment** | Active environment variables |
+| **Documentation** | API documentation viewer |
+| **Import** | Import cURL commands |
+| **Export** | Export requests as cURL |
+| **Request Builder** | Build and execute requests from OpenAPI specs |
 
 ### Output Pane
 Real-time HTML output showing:
@@ -146,3 +168,5 @@ Clear execution results at any level:
 - [Running Requests & Collections]({{ '/docs/running/' | relative_url }})
 - [Environments]({{ '/docs/environments/' | relative_url }})
 - [Data-Driven Testing]({{ '/docs/data-driven/' | relative_url }})
+- [Recording API Requests]({{ '/docs/recording-api/' | relative_url }})
+- [Browser Agent Server]({{ '/docs/browser-agent/' | relative_url }})
