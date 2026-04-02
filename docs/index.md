@@ -23,6 +23,9 @@ Xplorer is a desktop application that runs collections and environments (Postman
 
 ## Key Differentiators
 
+### LLM Agent Integration
+Start an API server from Xplorer and connect any LLM coding agent — Claude Code, GitHub Copilot, Cursor, or anything that speaks curl or MCP. The LLM controls a real browser to explore apps, validate UI, and automate interactions. You describe the task in natural language; the LLM handles the rest.
+
 ### True Local Execution
 As a true desktop app, Xplorer runs 100% local. Test localhost APIs and environments within your firewall directly. No worrying about CORS or runner agents.
 

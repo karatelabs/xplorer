@@ -1,16 +1,18 @@
 ---
 layout: docs
-title: Browser Agent Server
+title: LLM Agent
 ---
 
-# Browser Agent Server
+# LLM Agent
 
 > **Beta Feature**: This feature is currently in beta. We welcome feedback and bug reports via [GitHub Issues](https://github.com/karatelabs/xplorer/issues).
 
-Let AI agents like Claude Code control a browser to explore web applications, validate UI functionality, and automate interactions.
+Connect any LLM coding agent to Xplorer and let it control a browser, explore web applications, validate UI, and automate interactions. Xplorer provides the API server — your LLM of choice drives the workflow.
+
+**Supported LLM clients:** Claude Code, GitHub Copilot (VS Code & CLI), OpenAI Codex CLI, Cursor, and any tool that supports curl or MCP.
 
 <div class="ratio ratio-16x9 my-4">
-  <iframe src="https://www.youtube.com/embed/jM5pK0HHYuA" title="Browser Agent Automation Demo" allowfullscreen></iframe>
+  <iframe src="https://www.youtube.com/embed/jM5pK0HHYuA" title="LLM Agent Demo" allowfullscreen></iframe>
 </div>
 
 ## Prerequisites
@@ -19,107 +21,107 @@ This feature requires an active Xplorer subscription. Go to **Help > License** t
 
 ## Quick Start
 
-### 1. Start the Server
+### 1. Start the API Server
 
-1. Click **Agent** in the left navigation bar
-2. Select **Explore & Automate**
-3. Choose a goal (e.g., "Validate UI is Functional")
-4. Edit the instructions with your app's URL and login details
-5. Click **Start Server**
+Click **Agent** in the left navigation bar. The **LLM Agent** view opens automatically.
 
-![Agent server running]({{ '/assets/images/docs/agent-server-running.png' | relative_url }})
+Click **Start Server** to launch the API server on port 5757.
 
-### 2. Copy the Instruction
+![LLM Agent pane]({{ '/assets/images/docs/llm-agent-pane.png' | relative_url }})
 
-Click the **Copy** button next to "Tell your LLM". This copies a ready-to-use instruction.
+### 2. Connect Your LLM
 
-### 3. Paste into Claude Code
+Choose **curl** (default) or **MCP** mode and click **Copy** to get the command.
 
-Open Claude Code and paste. That's it.
+#### curl Mode (Recommended)
 
-Claude will:
-1. Execute the curl command to fetch the prompt
-2. Read the complete instructions from the server
-3. Create a browser and start automating
+Paste this into your LLM agent's terminal:
 
-## Example: Validate a Form
-
-**Instructions in Xplorer:**
-```
-## App Info
-- URL: https://httpbin.org/forms/post
-
-## Task
-1. Navigate to the URL above
-2. Fill out the form with test data:
-   - Customer name: John Doe
-   - Telephone: 555-1234
-   - E-mail: john@example.com
-   - Size: Medium
-   - Topping: Bacon
-3. Submit the form
-4. Verify the response shows the submitted data
+```bash
+curl http://localhost:5757/prompt
 ```
 
-**What happens:**
-1. Claude opens a browser and navigates to the form
-2. Fills each field with the specified data
-3. Submits the form
-4. Reports whether the submission was successful
+The LLM fetches the complete API reference and instructions from the server, then asks what you'd like to do. No manual configuration needed — the LLM discovers everything automatically.
 
-## Goal Presets
+#### MCP Mode
 
-| Goal | Description |
-|------|-------------|
-| **Validate UI is Functional** | Navigate through your app and verify UI elements work correctly |
-| **Custom** | Write your own instructions for any automation task |
+For LLM clients that support MCP (Model Context Protocol), use the CLI command:
+
+```bash
+claude mcp add karate-eval --transport http http://localhost:5757/mcp
+```
+
+Or add to your project's config file:
+
+```json
+{
+  "servers": {
+    "karate": {
+      "type": "http",
+      "url": "http://localhost:5757/mcp"
+    }
+  }
+}
+```
+
+| Client | Config file |
+|--------|-------------|
+| VS Code (Copilot) | `.vscode/mcp.json` |
+| Claude Code | `.claude/mcp.json` |
+| Cursor | `.cursor/mcp.json` |
+
+Both curl and MCP are served simultaneously on the same port — you don't need to choose one or the other at the server level. The toggle only controls which command is shown.
+
+### 3. Tell the LLM What to Do
+
+Once connected, simply tell the LLM what you want in natural language:
+
+- *"Open https://httpbin.org/forms/post, fill the form with test data, and submit it"*
+- *"Navigate to our app at localhost:3000 and verify the login flow works"*
+- *"Explore the site and report any broken links or error messages"*
+
+The LLM handles all the browser automation using the Agent JS API.
 
 ## How It Works
 
-The server runs on `localhost:5757` and exposes two endpoints:
+The API server on `localhost:5757` exposes these endpoints:
 
 | Endpoint | Description |
 |----------|-------------|
-| `GET /prompt` | Returns a complete prompt with API reference |
-| `POST /` | Executes JavaScript commands in the browser |
+| `GET /prompt` | Returns complete API reference and instructions for the LLM |
+| `POST /` | Executes JavaScript commands in the browser engine |
+| `POST /mcp` | MCP endpoint (JSON-RPC 2.0, Streamable HTTP transport) |
+| `GET /` | Server health check and active agent status |
 
-When you click Copy, Xplorer provides an instruction that tells Claude to fetch the prompt and follow it. The prompt includes everything Claude needs: command format, workflow patterns, and the full Agent API reference.
+The LLM writes JavaScript using the Agent API:
+
+```javascript
+var agent = Agent.create()           // Launch browser
+agent.go('https://example.com')      // Navigate
+agent.look()                         // See page state
+agent.act({on: '#login', action: 'click'})  // Interact
+```
+
+## Custom Port
+
+The port field is editable — change it from the default 5757 if needed. All copyable commands update automatically when you change the port.
 
 ## Command Log
 
-The Xplorer UI displays real-time traffic between the LLM and the server:
+The Output pane displays real-time traffic between the LLM and the server:
 
 - **>>>** Commands sent by the LLM
 - **<<<** Responses from the server
 
-Use this to see what Claude is doing or debug issues.
+## Status Bar
 
-## Using with Other LLMs
-
-The same approach works with any LLM that can execute shell commands:
-
-- **Claude.ai** (with computer use or artifacts)
-- **ChatGPT** with code execution
-- **Other AI assistants** that support tool use
-
-Simply paste the copied instruction into your LLM of choice.
-
-## Stopping the Server
-
-Click **Stop Server** to shut down. The browser closes automatically.
+The status bar shows a green indicator with the port number when the server is running. Click it to copy the MCP URL to your clipboard.
 
 ## Security
 
-- Server binds to `127.0.0.1` only—not accessible from other machines
+- Server binds to `127.0.0.1` only — not accessible from other machines
 - No authentication required (trusted local environment)
-- LLM only controls the browser, not your file system
-
-## Tips
-
-- **Edit the instructions** to include your app's URL and login credentials
-- **Start simple** with basic navigation before complex workflows
-- **Watch the command log** to understand what Claude is doing
-- **Be specific** in your instructions for best results
+- File operations are sandboxed to the working directory
 
 ## Next Steps
 

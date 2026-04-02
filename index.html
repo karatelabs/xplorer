@@ -8,13 +8,13 @@ title: Home
     <div class="row align-items-center">
       <div class="col-lg-6">
         <h1 class="display-5 fw-bold mb-4">
-          <span class="d-block">API Client</span>
+          <span class="d-block">API Client + LLM Agent</span>
           <span class="d-block fs-1 fw-normal mt-2">
             <span class="animated-adjective">Simple</span>
           </span>
         </h1>
         <p class="lead mb-4">
-          Run existing collections, environments and tests <strong><em>as-is</em></strong>. No migration needed. <strong>100% local</strong> - your secrets never touch the cloud.
+          Run existing collections <strong><em>as-is</em></strong>. Connect your LLM to automate browsers and test APIs. <strong>100% local</strong> — your secrets never touch the cloud.
         </p>
         <div class="d-flex gap-3 mb-4">
           <button id="download-btn" class="btn btn-primary btn-lg">
@@ -29,7 +29,7 @@ title: Home
           </button>
         </div>
         <p class="text-muted small">
-          <i class="bi bi-shield-lock me-1"></i>100% Local • Free Forever • Enterprise ready • macOS • Windows • Linux
+          <i class="bi bi-shield-lock me-1"></i>100% Local • Free Forever • LLM &amp; MCP Ready • Enterprise ready • macOS • Windows • Linux
         </p>
         <p class="text-muted small">
           Latest version: <strong><a href="https://github.com/karatelabs/xplorer/releases" class="text-decoration-none" id="version-link"><span id="version-number">2.0.1</span></a></strong> (<span id="release-date">2025-01-15</span>)
@@ -81,6 +81,15 @@ title: Home
     <div class="col-md-4">
       <div class="text-center">
         <div class="feature-icon text-primary">
+          <i class="bi bi-robot"></i>
+        </div>
+        <h4>LLM Agent &amp; MCP</h4>
+        <p class="text-muted">Connect Claude Code, Copilot, or any LLM via curl or MCP. Your AI agent controls a real browser to explore, test, and automate — you describe the task in plain English.</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="text-center">
+        <div class="feature-icon text-primary">
           <i class="bi bi-ui-checks"></i>
         </div>
         <h4>Familiar Interface</h4>
@@ -96,6 +105,9 @@ title: Home
         <p class="text-muted">Edit existing tests and collections in-place. Preserve investments in API tests for as long as needed. Choose if (and when) to migrate.</p>
       </div>
     </div>
+  </div>
+
+  <div class="row g-4 mt-4">
     <div class="col-md-4">
       <div class="text-center">
         <div class="feature-icon text-primary">
@@ -277,7 +289,7 @@ title: Home
   document.getElementById('release-date').textContent = formattedDate;
 
   // Animated adjective rotation
-  const adjectives = ['Simple', 'Easy', 'Lightweight', 'Capable', 'Local', 'Secure', 'Fast', 'Done Right.'];
+  const adjectives = ['Simple', 'Easy', 'Lightweight', 'Capable', 'Local', 'Secure', 'Fast', 'AI Ready', 'Done Right.'];
   const adjectiveElement = document.querySelector('.animated-adjective');
   let currentIndex = 0;
 

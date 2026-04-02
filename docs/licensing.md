@@ -14,7 +14,7 @@ The following features require an active Xplorer subscription:
 | Feature | Description |
 |---------|-------------|
 | [Recording API Requests]({{ '/docs/recording-api/' | relative_url }}) | Capture browser API traffic and export as AI prompts or curl |
-| [Browser Agent Server]({{ '/docs/browser-agent/' | relative_url }}) | LLM-driven browser automation via HTTP API |
+| [LLM Agent]({{ '/docs/browser-agent/' | relative_url }}) | Connect LLM agents via curl or MCP for browser automation |
 | [OpenAPI "Try It"]({{ '/docs/openapi/' | relative_url }}) | Execute API requests directly from OpenAPI spec |
 | [Karate Runner]({{ '/docs/karate-runner/' | relative_url }}) | Run Karate test files with real-time output |
 
@@ -104,4 +104,4 @@ Verify that:
 ## Next Steps
 
 - [Recording API Requests]({{ '/docs/recording-api/' | relative_url }}) - Capture API traffic from browser interactions
-- [Browser Agent Server]({{ '/docs/browser-agent/' | relative_url }}) - LLM-driven browser automation
+- [LLM Agent]({{ '/docs/browser-agent/' | relative_url }}) - Connect LLM agents via curl or MCP

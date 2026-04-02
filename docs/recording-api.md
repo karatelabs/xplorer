@@ -134,5 +134,5 @@ You can export your captured requests at any time before stopping.
 
 ## Next Steps
 
-- [Browser Agent Server]({{ '/docs/browser-agent/' | relative_url }}) - Let AI agents automate your browser
+- [LLM Agent]({{ '/docs/browser-agent/' | relative_url }}) - Connect an LLM agent to automate your browser
 - [Licensing & Sign-In]({{ '/docs/licensing/' | relative_url }}) - Manage your subscription

@@ -52,3 +52,4 @@ If you use Postman environments:
 - Learn about [Interface Overview]({{ '/docs/interface/' | relative_url }})
 - Understand [Running Collections]({{ '/docs/running/' | relative_url }})
 - Try [Data-Driven Testing]({{ '/docs/data-driven/' | relative_url }})
+- Connect an [LLM Agent]({{ '/docs/browser-agent/' | relative_url }}) via curl or MCP

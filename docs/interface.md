@@ -26,7 +26,7 @@ The left navigation bar provides access to different modes:
 | **Karate** | Karate project browser and test runner |
 | **Collection** | Postman-style collection tree view |
 | **OpenAPI / Spec** | OpenAPI specification navigator |
-| **Agent** | AI Agent features (Recording, Browser Automation) |
+| **Agent** | LLM Agent (curl/MCP connection) and API Recording |
 
 Click a button to switch views. The center panel updates to show the selected mode's content.
 
@@ -169,4 +169,4 @@ Clear execution results at any level:
 - [Environments]({{ '/docs/environments/' | relative_url }})
 - [Data-Driven Testing]({{ '/docs/data-driven/' | relative_url }})
 - [Recording API Requests]({{ '/docs/recording-api/' | relative_url }})
-- [Browser Agent Server]({{ '/docs/browser-agent/' | relative_url }})
+- [LLM Agent]({{ '/docs/browser-agent/' | relative_url }})
