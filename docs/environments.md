@@ -121,6 +121,72 @@ To switch to a different environment:
 
 **Tip**: Keep multiple environment files for different configurations (dev, staging, production).
 
+## Managing Secrets per Environment
+
+A common pattern is having different API base URLs, OAuth credentials, and API keys for each environment. Use separate environment files and reference all sensitive values as {% raw %}`{{variables}}`{% endraw %} in your collection.
+
+**dev.postman_environment.json:**
+```json
+{
+  "name": "Dev",
+  "values": [
+    {
+      "key": "baseUrl",
+      "value": "https://dev-api.example.com",
+      "enabled": true
+    },
+    {
+      "key": "tokenUrl",
+      "value": "https://dev-auth.example.com/oauth2/token",
+      "enabled": true
+    },
+    {
+      "key": "clientId",
+      "value": "dev-client-id",
+      "enabled": true
+    },
+    {
+      "key": "clientSecret",
+      "value": "dev-client-secret",
+      "enabled": true
+    }
+  ]
+}
+```
+
+**prod.postman_environment.json:**
+```json
+{
+  "name": "Production",
+  "values": [
+    {
+      "key": "baseUrl",
+      "value": "https://api.example.com",
+      "enabled": true
+    },
+    {
+      "key": "tokenUrl",
+      "value": "https://auth.example.com/oauth2/token",
+      "enabled": true
+    },
+    {
+      "key": "clientId",
+      "value": "prod-client-id",
+      "enabled": true
+    },
+    {
+      "key": "clientSecret",
+      "value": "prod-client-secret",
+      "enabled": true
+    }
+  ]
+}
+```
+
+Your collection uses {% raw %}`{{baseUrl}}`{% endraw %}, {% raw %}`{{tokenUrl}}`{% endraw %}, {% raw %}`{{clientId}}`{% endraw %}, and {% raw %}`{{clientSecret}}`{% endraw %} everywhere — switching the environment file switches the entire configuration at once.
+
+> For a detailed walkthrough of using environment variables with OAuth, see [OAuth 2.0 — Using Environment Variables]({{ '/docs/oauth/#using-environment-variables-with-oauth' | relative_url }}).
+
 ## Modifying Variables
 
 Variables can be modified:

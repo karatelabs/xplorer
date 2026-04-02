@@ -1,0 +1,128 @@
+{
+  "info": {
+    "name": "GitHub OAuth - Environment Variables Example",
+    "description": "Demonstrates using environment variables for OAuth 2.0 credentials.\n\nAll OAuth settings (Client ID, Client Secret, scopes) and API base URL are parameterized using {{variables}} so you can switch between environments without editing the collection.\n\n**Setup:**\n1. Load this collection in Xplorer\n2. Load one of the matching environment files (github-dev or github-prod)\n3. Click Send on any request\n4. Browser opens for GitHub login\n5. Authorize the app, and the API response appears\n\n**Environment variables used:**\n- `githubApiUrl` - GitHub API base URL\n- `githubAuthUrl` - GitHub authorization URL\n- `githubTokenUrl` - GitHub token exchange URL\n- `githubClientId` - Your OAuth app Client ID\n- `githubClientSecret` - Your OAuth app Client Secret\n- `githubScope` - Requested OAuth scopes",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "grant_type",
+        "value": "authorization_code",
+        "type": "string"
+      },
+      {
+        "key": "authorizationUrl",
+        "value": "{{githubAuthUrl}}",
+        "type": "string"
+      },
+      {
+        "key": "url",
+        "value": "{{githubTokenUrl}}",
+        "type": "string"
+      },
+      {
+        "key": "client_id",
+        "value": "{{githubClientId}}",
+        "type": "string"
+      },
+      {
+        "key": "client_secret",
+        "value": "{{githubClientSecret}}",
+        "type": "string"
+      },
+      {
+        "key": "scope",
+        "value": "{{githubScope}}",
+        "type": "string"
+      }
+    ]
+  },
+  "item": [
+    {
+      "name": "Get Authenticated User",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/vnd.github+json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{githubApiUrl}}/user",
+          "host": [
+            "{{githubApiUrl}}"
+          ],
+          "path": [
+            "user"
+          ]
+        },
+        "description": "Fetches the authenticated GitHub user's profile.\n\nOAuth credentials come from the active environment file.\nAuth is inherited from the collection level, so no per-request auth config is needed."
+      },
+      "response": []
+    },
+    {
+      "name": "List Your Repositories",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/vnd.github+json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{githubApiUrl}}/user/repos?per_page=10&sort=updated",
+          "host": [
+            "{{githubApiUrl}}"
+          ],
+          "path": [
+            "user",
+            "repos"
+          ],
+          "query": [
+            {
+              "key": "per_page",
+              "value": "10"
+            },
+            {
+              "key": "sort",
+              "value": "updated"
+            }
+          ]
+        },
+        "description": "Lists repositories for the authenticated user.\nReuses the cached token from the first request - no re-authentication needed."
+      },
+      "response": []
+    },
+    {
+      "name": "Get Rate Limit Status",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/vnd.github+json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{githubApiUrl}}/rate_limit",
+          "host": [
+            "{{githubApiUrl}}"
+          ],
+          "path": [
+            "rate_limit"
+          ]
+        },
+        "description": "Shows your current GitHub API rate limit status."
+      },
+      "response": []
+    }
+  ]
+}
