@@ -13,6 +13,15 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/docs.css' | relative_url }}">
+
+  <!-- GA4 (shared property across karatelabs.io subdomains) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SW1G6ECHWS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SW1G6ECHWS', {anonymize_ip: true});
+  </script>
 </head>
 <body>
   {% include header.html %}
