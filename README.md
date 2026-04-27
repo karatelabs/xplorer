@@ -7,7 +7,7 @@ Run your existing Postman collections locally. **100% local execution—your sec
 ---
 
 <p align="center">
-  <a href="https://xplorer.karatelabs.io">
+  <a href="https://karatelabs.io/xplorer">
     <img src="assets/images/docs/xplorer-ui.png" alt="Karate Xplorer Interface" width="800">
   </a>
 </p>
@@ -16,7 +16,7 @@ Run your existing Postman collections locally. **100% local execution—your sec
 
 <div align="center">
 
-### [:globe_with_meridians: **Visit the Documentation Site**](https://xplorer.karatelabs.io)
+### [:globe_with_meridians: **Visit the Documentation Site**](https://docs.karatelabs.io/xplorer/interface)
 
 **Everything you need is here:**
 Installation • Quick Start • Features • User Guide
@@ -27,7 +27,7 @@ Installation • Quick Start • Features • User Guide
 
 <div align="center">
 
-[:arrow_down: Download](https://xplorer.karatelabs.io) •
+[:arrow_down: Download](https://karatelabs.io/xplorer/download) •
 [:tv: Watch Demo](https://youtu.be/ELekzGC7mC4?si=KIRGR1PAJ1boC5xV) •
 [:heavy_dollar_sign: Pricing](https://www.karatelabs.io/pricing) •
 [:octocat: Report Issues](https://github.com/karatelabs/xplorer/issues)
